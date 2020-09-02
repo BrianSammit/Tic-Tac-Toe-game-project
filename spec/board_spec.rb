@@ -1,5 +1,7 @@
 # rubocop: disable Lint/ParenthesesAsGroupedExpression
 
+# rubocop: disable Lint/UselessAssignment
+
 require_relative '../lib/board'
 require_relative '../lib/player'
 
@@ -77,3 +79,5 @@ describe Board do
 end
 
 # rubocop: enable Lint/ParenthesesAsGroupedExpression
+
+# rubocop: enable Lint/UselessAssignment

@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# rubocop: disable Lint/ParenthesesAsGroupedExpression
 
 require_relative '../lib/player'
 
@@ -14,3 +14,5 @@ describe Player do
     end
   end
 end
+
+# rubocop: enable Lint/ParenthesesAsGroupedExpression
