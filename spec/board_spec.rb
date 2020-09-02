@@ -22,15 +22,23 @@ describe Board do
 
   context 'full' do
     let (:board1) { Board.new }
-    it 'Check if the board is full' do
+    it 'Check if the board is not full' do
       expect(board1.full).to eq(false)
+    end
+    it 'Check if the board is full' do
+      board1.instance_variable_set('@board', %w[O X X O O X O X O])
+      expect(board1.full).to eq(true)
     end
   end
 
   context 'win?' do
     let (:board1) { Board.new }
-    it 'Checks if there is a winner by checking the patterns' do
+    it 'Checks if there is not a winner by checking the patterns' do
       expect(board1.win?).to be false
+    end
+    it 'Checks if there is a winner by checking the patterns' do
+      board1.instance_variable_set('@board', %w[X X X O O X O X O])
+      expect(board1.win?).to be true
     end
   end
 
